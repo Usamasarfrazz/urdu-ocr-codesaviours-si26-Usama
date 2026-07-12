@@ -58,6 +58,42 @@ Applied 3 types of augmentation on synthetic images to increase dataset size and
 - Sample grid: 12 random image previews
 
 ---
+## Why We Need a Better Model
+
+### Gap Analysis
+
+I tested Tesseract OCR on five preprocessed Urdu text images.
+
+### Results
+
+**Image 1**
+- Actual Text: پاکستان زندہ باد
+- Tesseract Output: (Paste your OCR output here)
+- Observation: Some Urdu characters were incorrectly recognized.
+
+**Image 2**
+- Actual Text: تعلیم ہر انسان کا حق ہے
+- Tesseract Output: (Paste your OCR output here)
+- Observation: Several words were missing or incorrect.
+
+**Image 3**
+- Actual Text: آج موسم خوشگوار ہے
+- Tesseract Output: (Paste your OCR output here)
+- Observation: Urdu ligatures were not recognized properly.
+
+**Image 4**
+- Actual Text: لاہور ایک تاریخی شہر ہے
+- Tesseract Output: (Paste your OCR output here)
+- Observation: Characters were recognized incorrectly.
+
+**Image 5**
+- Actual Text: اردو ہماری قومی زبان ہے
+- Tesseract Output: (Paste your OCR output here)
+- Observation: The OCR produced inaccurate text.
+
+### Conclusion
+
+Tesseract fails on Urdu because Urdu is a right-to-left script with connected characters and complex ligatures. Many letters have similar shapes and differ only by dots, making recognition difficult for a general OCR engine. This demonstrates the need for a specialized Urdu OCR model trained specifically on Urdu text.
 
 ## Notebook Structure
 
@@ -226,39 +262,3 @@ pip install Pillow arabic-reshaper python-bidi gdown matplotlib easyocr
 - **HuggingFace:** Coming in Week 5
 - **Internship:** Code Saviours SI-26 | June 29 – August 29, 2026
 
-## Why We Need a Better Model
-
-### Gap Analysis
-
-I tested Tesseract OCR on five preprocessed Urdu text images.
-
-### Results
-
-**Image 1**
-- Actual Text: پاکستان زندہ باد
-- Tesseract Output: (Paste your OCR output here)
-- Observation: Some Urdu characters were incorrectly recognized.
-
-**Image 2**
-- Actual Text: تعلیم ہر انسان کا حق ہے
-- Tesseract Output: (Paste your OCR output here)
-- Observation: Several words were missing or incorrect.
-
-**Image 3**
-- Actual Text: آج موسم خوشگوار ہے
-- Tesseract Output: (Paste your OCR output here)
-- Observation: Urdu ligatures were not recognized properly.
-
-**Image 4**
-- Actual Text: لاہور ایک تاریخی شہر ہے
-- Tesseract Output: (Paste your OCR output here)
-- Observation: Characters were recognized incorrectly.
-
-**Image 5**
-- Actual Text: اردو ہماری قومی زبان ہے
-- Tesseract Output: (Paste your OCR output here)
-- Observation: The OCR produced inaccurate text.
-
-### Conclusion
-
-Tesseract fails on Urdu because Urdu is a right-to-left script with connected characters and complex ligatures. Many letters have similar shapes and differ only by dots, making recognition difficult for a general OCR engine. This demonstrates the need for a specialized Urdu OCR model trained specifically on Urdu text.
