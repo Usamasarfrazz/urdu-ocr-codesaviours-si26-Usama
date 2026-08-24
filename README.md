@@ -1,54 +1,54 @@
-# Code Switching NLP
+# Urdu OCR
 
-A language identification model for Roman Urdu and English mixed text.
+A fine-tuned TrOCR model that extracts Urdu text from images.
 
 ## Why This Matters
 
-People in Pakistan often mix Roman Urdu and English in the same sentence.
-This project aims to identify whether individual words are Roman Urdu,
-English, or mixed.
+Urdu documents and images can be difficult for OCR systems to read.
+This project aims to recognize Urdu text from images using a machine
+learning model.
 
 ## How It Works
 
-A dataset of 150+ mixed Roman Urdu and English sentences was created.
-Each word was labelled as URD, ENG, or MIX.
-The dataset was divided into training and testing data.
-XLM-RoBERTa was fine-tuned to identify the language of each word.
+First, Urdu images were collected and prepared as a dataset.
+The images were processed and connected with their text labels.
+A pretrained TrOCR model was then fine-tuned on the Urdu dataset.
+Finally, the model was connected to a Gradio interface for testing.
 
-## Hugging Face Model
+## Live Demo
 
-PASTE YOUR HUGGING FACE MODEL LINK HERE
+[Hugging Face Space](PASTE_YOUR_SPACE_LINK_HERE)
+
+## Demo Video
+
+[Watch the Loom Demo](PASTE_YOUR_LOOM_LINK_HERE)
 
 ## Results
 
-URD F1: XX
-
-ENG F1: XX
-
-MIX F1: XX
-
-## Dataset
-
-The dataset contains 150+ mixed-language sentences.
-
-Labels:
-
-- URD = Roman Urdu
-- ENG = English
-- MIX = Mixed/unclear
+Accuracy: XX%
 
 ## How to Run Locally
 
-Install:
+Install the required libraries:
 
-pip install transformers torch datasets seqeval scikit-learn
+pip install torch transformers gradio pillow
+
+Then run:
+
+python app.py
+
+## Dataset
+
+The dataset contains Urdu text images collected from different sources.
+It includes different types of Urdu text and image conditions.
 
 ## Technologies
 
 - Python
 - PyTorch
 - Hugging Face Transformers
-- XLM-RoBERTa
+- TrOCR
+- Gradio
 - Google Colab
 
 ## Built By
