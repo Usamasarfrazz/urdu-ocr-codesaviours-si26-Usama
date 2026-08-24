@@ -1,138 +1,43 @@
-# Urdu OCR — A Fine-Tuned TrOCR Model for Urdu Text Recognition
+# Urdu OCR — Code Saviours SI-26
 
-## Project Description
+A fine-tuned TrOCR-based application that extracts Urdu text from images.
 
-This project aims to extract Urdu text from images using Microsoft's TrOCR model. The model was fine-tuned and tested during the Code Saviours ML/AI Internship (SI-26).
+## Why This Matters
 
----
+Urdu text recognition from images can be difficult because of different
+fonts, image quality, backgrounds, and Urdu writing patterns.
 
-# Problem Statement
+This project aims to make Urdu OCR easier by fine-tuning a pretrained
+TrOCR model on an Urdu dataset.
 
-Urdu OCR is difficult because Urdu has:
+## How It Works
 
-- Different fonts (Nastaliq, Naskh)
-- Connected characters
-- Handwritten and printed text
-- Different backgrounds
+The project uses the TrOCR model from Microsoft.
 
-This project helps convert Urdu images into digital text.
+Urdu image data was collected and prepared for training.
 
-Example use cases:
+The model was fine-tuned on the Urdu dataset so it could recognize Urdu text.
 
-- Digitizing books
-- Reading newspapers
-- Document processing
-- Education
+A Gradio interface was created to allow users to upload an Urdu image and
+receive the extracted text.
 
----
-
-# How It Works
-
-The project uses Microsoft's TrOCR model.
-
-Steps:
-
-1. Collect Urdu images.
-2. Preprocess images.
-3. Create labels.
-4. Build a dataset class.
-5. Fine-tune the TrOCR model.
-6. Test the model.
-7. Deploy using Gradio and Hugging Face Spaces.
-
----
-
-# Dataset Details
-
-- Total images: 246
-- Sources:
-
-  - Books
-  - Newspapers
-  - Synthetic images
-  - Augmented images
-
-- Dataset contains:
-
-  - Printed Urdu
-  - Different fonts
-  - Different text sizes
-  - Different backgrounds
-
----
-
-# Technologies Used
-
-- Python
-- PyTorch
-- Transformers
-- TrOCR
-- Pandas
-- Pillow
-- Gradio
-- Hugging Face
-
----
-
-# Project Structure
-
-```text
-urdu-ocr-codesaviours-si26-usama/
-
-├── data/
-│   ├── raw/
-│   └── processed/
-
-├── labels.csv
-├── README.md
-├── app.py
-├── requirements.txt
-
-├── week-1.ipynb
-├── week-3.ipynb
-├── week-4.ipynb
-├── week-5.ipynb
-```
-
-# Live Demo
+## Live Demo
 
 Hugging Face Space:
 
-https://huggingface.co/spaces/Usamasarfraz/urdu-ocr-codesaviours-si26-usama-v2
+[PASTE YOUR WORKING HUGGING FACE SPACE LINK HERE]
 
----
+## Results
 
-# GitHub Repository
+Model accuracy:
 
-https://github.com/Usamasarfrazz/urdu-ocr-codesaviours-si26-Usama
+[PUT YOUR ACTUAL WEEK 4 ACCURACY HERE]%
 
----
+The model was tested on images that were not used during training.
 
-# Results
+## How to Run Locally
 
-- Dataset size: 246 images
-- Training completed successfully.
-- The model was trained on Urdu text images.
-- Accuracy can be improved with a larger dataset.
-
----
-
-# How to Run Locally
+Install the required libraries:
 
 ```bash
-git clone https://github.com/Usamasarfrazz/urdu-ocr-codesaviours-si26-Usama.git
-
-cd urdu-ocr-codesaviours-si26-Usama
-
-pip install -r requirements.txt
-
-python app.py
-```
-
----
-
-# Credits
-
-**Usama Sarfraz**
-
-Built during the **Code Saviours ML/AI Internship — Batch SI-26**.
+pip install torch transformers gradio pillow
